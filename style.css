@@ -492,6 +492,7 @@ th span {
 
     .warning__block {
         width: 100%;
+        display: none;
         height: auto;
     }
 
