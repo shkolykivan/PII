@@ -491,7 +491,7 @@ th span {
     }
 
     .warning__block {
-        width: auto;
+        width: 100%;
         height: auto;
     }
 
