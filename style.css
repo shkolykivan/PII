@@ -484,4 +484,18 @@ th span {
         padding: 0 5px;
         text-align: center;
     }
+
+    
+    .warning__page {
+        padding-inline: 10px;
+    }
+
+    .warning__block {
+        width: auto;
+        height: auto;
+    }
+
+    .warning__main {
+        font-size: 30px;
+    }
 }
