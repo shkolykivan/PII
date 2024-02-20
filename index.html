@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПВІ</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__flex-box">
+                    <div class="header__cms">cms</div>
+                    <div class="header__right">
+                        <div class="header__massage">
+                            <img src="./img/bell.svg" alt="">
+                        </div>
+                        <div class="header__account">
+                            <div class="account__img">
+                                <img src="./img/cat.jpg" alt="">
+                            </div>
+                            <div class="account__name">Shkolyk Ivan</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main__container">
+                <div class="main__flex-box">
+                    <nav class="navigation">
+                        <div class="navigation__block">
+                            <a href="#">Dashboard</a>
+                        </div>
+                        <div class="navigation__block">
+                            <a href="#">Students</a>
+                        </div>
+                        <div class="navigation__block">
+                            <a href="#">Tasks</a>
+                        </div>
+                    </nav>
+                    <section class="content">
+                        <h1 class="main__title">Students</h1>
+                        <button class="add__student">+</button>
+                        <table class="table">
+                            <thead class="table__head">
+                                <tr class="table__title">
+                                    <th class="table__content">
+                                        <input type="checkbox" name="checkbox1" class="checkbox">
+                                    </th>
+                                    <th class="table__content"><span>Group</span></th>
+                                    <th class="table__content table__title-name"><span>Name</span></th>
+                                    <th class="table__content table__title-gender"><span>Gender</span></th>
+                                    <th class="table__content"><span>Birthday</span></th>
+                                    <th class="table__content table__title-status"><span>Status</span></th>
+                                    <th class="table__content table__title-options"><span>Options</span></th>
+                                </tr>
+                            </thead>
+                            <tbody class="table__body">
+
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
+
+
+
+
+
+                <!-- <div class="table">
+                    <div class="table__head">
+                        <div class="table__title">
+                            <div class="table__content">checkbox</div>
+                            <div class="table__content">Group</div>
+                            <div class="table__content">Name</div>
+                            <div class="table__content">Gender</div>
+                            <div class="table__content">Birthday</div>
+                            <div class="table__content">Status</div>
+                            <div class="table__content">Options</div>
+                        </div>
+                    </div>
+                    <div class="table__body">
+                        <div class="table__rows">
+                            <div class="table__content">checkbox</div>
+                            <div class="table__content">Group</div>
+                            <div class="table__content">Name</div>
+                            <div class="table__content">Gender</div>
+                            <div class="table__content">Birthday</div>
+                            <div class="table__content">Status</div>
+                            <div class="table__content">Options</div>
+                        </div>
+                        <div class="table__rows">
+                            <div class="table__content">checkbox</div>
+                            <div class="table__content">Group</div>
+                            <div class="table__content">Name</div>
+                            <div class="table__content">Gender</div>
+                            <div class="table__content">Birthday</div>
+                            <div class="table__content">Status</div>
+                            <div class="table__content">Options</div>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+        </main>
+    </div>
+
+
+
+    <div class="adding__page">
+        <div class="adding__block">
+            <div class="adding__header">
+                <h2>Add Student</h2>
+                <button onclick="{document.querySelector('.adding__page').style.display = 'none'}">X</button>
+            </div>
+            <form class="adding__form">
+                <div class="form__flex-box">
+                    <div class="form__item">
+                        <select class="group__input" name="group">
+                            <option value="" disabled selected hidden>Select Group</option>
+                            <option value="PZ-25">PZ-25</option>
+                            <option value="PZ-26">PZ-26</option>
+                        </select>
+                    </div>
+                    <div class="form__item">
+                        <input class="fname__input" type="text" name="fname" placeholder="First name">
+                    </div>
+                    <div class="form__item">
+                        <input class="lname__input" type="text" name="lname" placeholder="Last name">
+                    </div>
+                    <div class="form__item">
+                        <select class="gender__input" name="gender">
+                            <option value="" disabled selected hidden>Select Gender</option>
+                            <option value="F">F</option>
+                            <option value="M">M</option>
+                        </select>
+                    </div>
+                    <div class="form__item">
+                        <input class="birthday__input" type="text" name="birthday" placeholder="Birthday">
+                    </div>
+                </div>
+            </form>
+            <div class="adding__footer">
+                <button onclick="{document.querySelector('.adding__page').style.display = 'none'}"
+                    class="confirm__edit">Ok</button>
+                <button class="confirm__adding">Create</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="warning__page">
+        <div class=" warning__block">
+            <div class=" warning__header">
+                <h2>Warning</h2>
+                <button onclick="{document.querySelector('.warning__page').style.display = 'none'}">X</button>
+            </div>
+            <div class="warning__main">Are you sure you want to delete user?</div>
+            <div class=" warning__footer">
+                <button class="confirm__warning">Ok</button>
+                <button onclick="{document.querySelector('.warning__page').style.display = 'none'}">Cansel</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
