@@ -59,7 +59,7 @@
     margin-right: 50px;
 }
 
-.header__massage:hover {
+.header__massage:hover .bell__img {
     animation: bellShake 0.4s 0s 2;
 }
 
@@ -94,6 +94,10 @@
 .header__account {
     display: flex;
     align-items: center;
+}
+
+.header__account:active .modal__account {
+    display: block;
 }
 
 .account__img {
@@ -368,6 +372,101 @@ th span {
 }
 
 
+
+
+
+
+.header__massage:active .modal__masage {
+    display: block;
+}
+
+.modal__masage {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #fff;
+    padding: 20px;
+    max-width: 400px;
+    border: 1px solid #9e9393;
+    display: none;
+}
+
+.modal__masage-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal__masage-container:last-child {
+    margin-bottom: 0;
+}
+
+
+.modal__masage-adreser {
+    margin-right: 20px;
+
+}
+
+.modal__masage-box {
+    width: 200px;
+    height: 40px;
+    background: #9e9393;
+    border-radius: 10px;
+}
+
+.modal__masage-image {
+    display: flex;
+    justify-content: center;
+}
+
+.modal__masage-image img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.modal__account {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #fff;
+    max-width: 400px;
+    border: 1px solid #9e9393;
+    display: none;
+}
+
+.modal__account-block {
+    padding: 15px 40px;
+    text-align: center;
+    border-bottom: 1px solid #9e9393;
+    display: block;
+    color: #222222;
+    transition: all 0.3s;
+}
+
+.modal__account-block:hover {
+    /* text-shadow: 0.5px 0.5px 1px #838383; */
+    text-decoration: underline;
+    color: #676767;
+}
+
+.modal__account-block:last-child {
+    border-bottom: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* !============================================================================ */
 @media (max-width: 1250px) {
     .main__flex-box {
         display: block;
@@ -431,17 +530,6 @@ th span {
     }
 }
 
-/* !============================================================ */
-/* !============================================================ */
-/* !============================================================ */
-/* !============================================================ */
-/* !============================================================ */
-/* !============================================================ */
-/* !============================================================ */
-/* !============================================================ */
-/* !============================================================ */
-/* !============================================================ */
-
 @media (max-width: 650px) {
     .options {
         position: relative;
@@ -485,13 +573,12 @@ th span {
         text-align: center;
     }
 
-    
     .warning__page {
         padding-inline: 10px;
     }
 
     .warning__block {
-        width: 100%;
+        width: auto;
         height: auto;
     }
 
