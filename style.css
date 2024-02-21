@@ -94,6 +94,7 @@
 .header__account {
     display: flex;
     align-items: center;
+    cursor: default;
 }
 
 .header__account:active .modal__account {
