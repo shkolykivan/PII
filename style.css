@@ -34,7 +34,6 @@
     background: #127347f1;
     background: #777;
     padding: 15px 30px;
-    color: #fff;
     font-size: 20px;
 }
 
@@ -46,6 +45,7 @@
 
 .header__cms {
     text-transform: uppercase;
+    color: #fff;
 }
 
 .header__right {
@@ -97,8 +97,8 @@
     cursor: default;
 }
 
-.header__account:active .modal__account {
-    display: block;
+.account__name {
+    color: #fff;
 }
 
 .account__img {
@@ -174,12 +174,14 @@ input[type="checkbox"] {
 .table__rows {
     display: grid;
     grid-template-columns: repeat(7, calc(100% / 7));
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .table__head,
 .table__body {
     display: block;
     border-right: 1px solid #222222;
+    padding: 0;
 }
 
 .table__body {
@@ -193,6 +195,27 @@ input[type="checkbox"] {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 1s;
+}
+
+.table__head tr:first-child {
+    background: #d5d6d2;
+}
+
+.table__body tr:nth-child(even) {
+    background: #d5d6d2;
+}
+
+.table__body tr:nth-child(odd) {
+    background: #e5e5e5;
+}
+
+.table__body tr {
+    transition: all 0.5s;
+}
+
+.table__body tr:hover {
+    background: #fff;
 }
 
 .table__rows .circle {
@@ -209,6 +232,7 @@ input[type="checkbox"] {
 
 .options__edit {
     margin-right: 10px;
+    background: #fff;
 }
 
 .options__edit,
@@ -216,7 +240,6 @@ input[type="checkbox"] {
     height: 35px;
     height: 35px;
     border: 1px solid #777;
-    background: none;
 }
 
 .options__edit img {
@@ -375,12 +398,6 @@ th span {
 
 
 
-
-
-.header__massage:active .modal__masage {
-    display: block;
-}
-
 .modal__masage {
     position: absolute;
     top: 70px;
@@ -418,6 +435,14 @@ th span {
 .modal__masage-image {
     display: flex;
     justify-content: center;
+}
+
+.modal__account a {
+    color: #000;
+}
+
+.modal__account-block {
+    color: #000;
 }
 
 .modal__masage-image img {
@@ -482,10 +507,6 @@ th span {
     }
 
 
-    .options button {
-        /* display: none; */
-    }
-
     .navigation {
         display: flex;
         padding: 25px 0 0 20px;
@@ -509,7 +530,7 @@ th span {
 @media (max-width: 850px) {
     .navigation {
         display: flex;
-        padding: 25px 0 0 20px;
+        padding: 25px 0 0;
     }
 
     .navigation .navigation__block {
@@ -544,7 +565,6 @@ th span {
         height: 35px;
         bottom: 40px;
         left: 2px;
-        background: #fff;
     }
 
     .options__delete {
