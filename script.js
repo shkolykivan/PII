@@ -1,19 +1,33 @@
 
 document.querySelector('.add__student').addEventListener('click', () => {
+    document.querySelector('.group__input').value = ''
+    document.querySelector('.fname__input').value = ''
+    document.querySelector('.lname__input').value = ''
+    document.querySelector('.gender__input').value = ''
+    document.querySelector('.birthday__input').value = ''
+
+
+
     document.querySelector('.adding__page').style.display = 'flex'
+
+    document.querySelector('.confirm__adding').removeEventListener('click', f)
+    document.querySelector('.confirm__adding').addEventListener('click', mainFunction)
+
+    //Зміна заголовка
+    document.querySelector('.chaning__title').textContent = 'Add Student'
 })
 
+function f() {
+    document.querySelector('.adding__page').style.display = 'none'
+}
 
 
-
-document.querySelector('.confirm__adding').addEventListener('click', () => {
+function mainFunction() {
     let group = document.querySelector('.group__input')
     let firstName = document.querySelector('.fname__input')
     let lastName = document.querySelector('.lname__input')
     let gender = document.querySelector('.gender__input')
     let birthday = document.querySelector('.birthday__input')
-
-
 
 
     //додавання вузла
@@ -30,7 +44,7 @@ document.querySelector('.confirm__adding').addEventListener('click', () => {
         <div class="circle">
         </div>
     </td>
-    <th class="table__content options">
+    <td class="table__content options">
         <button class="options__edit">
             <img src="./img/pencil.svg">
         </button>
@@ -40,7 +54,7 @@ document.querySelector('.confirm__adding').addEventListener('click', () => {
         <button class="options__hide-showe">
             !
         </button>
-    </th>`
+    </td>`
     document.querySelector('.table__body').appendChild(tr)
 
 
@@ -59,13 +73,20 @@ document.querySelector('.confirm__adding').addEventListener('click', () => {
 
     //кнопка редагування
     tr.querySelector('.options__edit').addEventListener('click', () => {
+        document.querySelector('.confirm__adding').removeEventListener('click', mainFunction)
+        document.querySelector('.confirm__adding').addEventListener('click', f)
+
+
         document.querySelector('.adding__page').style.display = 'flex'
-        const confirmButton = document.querySelector('.confirm__edit');
+        document.querySelector('.chaning__title').textContent = 'Edit Student'
         group.value = tr.querySelector('.table__group').textContent
         firstName.value = tr.querySelector('.table__name').textContent.split(' ')[0]
         lastName.value = tr.querySelector('.table__name').textContent.split(' ')[1]
         gender.value = tr.querySelector('.table__gender').textContent
         birthday.value = tr.querySelector('.table__birthday').textContent
+
+        const confirmButton = document.querySelector('.confirm__edit')
+        confirmButton.addEventListener('click', clickEvent)
         function clickEvent() {
             tr.querySelector('.table__group').textContent = group.value
             tr.querySelector('.table__name').textContent = firstName.value + " " + lastName.value
@@ -74,12 +95,7 @@ document.querySelector('.confirm__adding').addEventListener('click', () => {
             document.querySelector('.adding__page').style.display = 'none'
             confirmButton.removeEventListener('click', clickEvent);
         }
-        confirmButton.addEventListener('click', clickEvent);
     })
-
-
-
-
 
 
     //активація всіх чекбоксів
@@ -90,32 +106,31 @@ document.querySelector('.confirm__adding').addEventListener('click', () => {
             element.checked = checkboxes[0].checked;
         })
     })
-    document.querySelector('.adding__page').style.display = 'none'
 
 
 
-    {
-        document.querySelectorAll('.table__rows').forEach(item => {
-            item.querySelector('.options__hide-showe').addEventListener('click', event => {
-                event.stopPropagation(); // Зупиняємо подальше розповсюдження події, щоб не викликати document.addEventListener
-                item.querySelector('.options__edit').style.display = 'block';
-                item.querySelector('.options__delete').style.display = 'block';
-                document.addEventListener('click', event => {
-                    const target = event.target;
-                    if (!target.closest('.options__edit') && !target.closest('.options__delete')) {
-                        document.querySelectorAll('.options__edit, .options__delete').forEach(button => {
-                            button.style.display = 'none';
-                        });
-                    }
-                });
-            });
+
+    //Приховане редагування і видалення
+    if (window.innerWidth <= 650) {
+        tr.querySelector('.options__hide-showe').addEventListener('click', () => {
+            document.querySelectorAll('.table__rows').forEach(item => {
+                item.querySelector('.options__edit').style.display = 'none';
+                item.querySelector('.options__delete').style.display = 'none';
+            })
+
+            tr.querySelector('.options__edit').style.display = 'block';
+            tr.querySelector('.options__delete').style.display = 'block';
+        })
+        document.addEventListener('click', function (event) {
+            if (!event.target.closest('.options')) {
+                document.querySelectorAll('.table__rows').forEach(item => {
+                    item.querySelector('.options__edit').style.display = 'none';
+                    item.querySelector('.options__delete').style.display = 'none';
+                })
+            }
         });
-
     }
-})
-
-
-
+}
 
 
 if (window.innerWidth <= 650) {
@@ -125,6 +140,20 @@ if (window.innerWidth <= 650) {
     status.textContent = 'S'
     const options = document.querySelector('.table__title-options')
     options.textContent = '...'
+}
 
+document.querySelector('.header__account').addEventListener('click', () => {
+    document.querySelector('.modal__account').style.display = 'block'
+})
+document.addEventListener('click', (event) => {
+    if (!event.target.closest('.header__account'))
+        document.querySelector('.modal__account').style.display = 'none'
+})
 
-} 
+document.querySelector('.header__massage').addEventListener('click', () => {
+    document.querySelector('.modal__masage').style.display = 'block'
+})
+document.addEventListener('click', (event) => {
+    if (!event.target.closest('.header__massage'))
+        document.querySelector('.modal__masage').style.display = 'none'
+})
