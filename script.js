@@ -10,14 +10,14 @@ document.querySelector('.add__student').addEventListener('click', () => {
 
     document.querySelector('.adding__page').style.display = 'flex'
 
-    document.querySelector('.confirm__adding').removeEventListener('click', f)
+    document.querySelector('.confirm__adding').removeEventListener('click', hideAddingPage)
     document.querySelector('.confirm__adding').addEventListener('click', mainFunction)
 
     //Зміна заголовка
     document.querySelector('.chaning__title').textContent = 'Add Student'
 })
 
-function f() {
+function hideAddingPage() {
     document.querySelector('.adding__page').style.display = 'none'
 }
 
@@ -74,11 +74,12 @@ function mainFunction() {
     //кнопка редагування
     tr.querySelector('.options__edit').addEventListener('click', () => {
         document.querySelector('.confirm__adding').removeEventListener('click', mainFunction)
-        document.querySelector('.confirm__adding').addEventListener('click', f)
+        document.querySelector('.confirm__adding').addEventListener('click', hideAddingPage)
 
 
         document.querySelector('.adding__page').style.display = 'flex'
         document.querySelector('.chaning__title').textContent = 'Edit Student'
+
         group.value = tr.querySelector('.table__group').textContent
         firstName.value = tr.querySelector('.table__name').textContent.split(' ')[0]
         lastName.value = tr.querySelector('.table__name').textContent.split(' ')[1]
