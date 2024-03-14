@@ -203,7 +203,13 @@ document.getElementById('button').addEventListener('click', function () {
 
 
 
+    const respons = await fetch('https://jsonplaceholder.typicode.com/users')
+                const data = await respons.json()
 
+                data.forEach(item => {
+                    toHTML(item)
+                    console.log(JSON.stringify(item))
+                });
     </script>
 </body>
 
