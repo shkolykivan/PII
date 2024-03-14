@@ -1,0 +1,182 @@
+/* ============================================================================== */
+.header {
+    background: #127347f1;
+    background: #777;
+    padding: 15px 30px;
+    font-size: 20px;
+}
+
+.header__flex-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__cms {
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.header__right {
+    display: flex;
+    align-items: center;
+}
+
+.header__massage {
+    width: 30px;
+    height: 30px;
+    margin-right: 50px;
+}
+
+.header__massage:hover .bell__img {
+    animation: bellShake 0.4s 0s 2;
+}
+
+.header__massage img {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes bellShake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(45deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-45deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+.header__account {
+    display: flex;
+    align-items: center;
+    cursor: default;
+}
+
+.account__name {
+    color: #fff;
+}
+
+.account__img {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #00ff778d;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.account__img img {
+    width: 100%;
+    height: 100%;
+}
+
+.modal__masage {
+    z-index: 10;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #fff;
+    padding: 20px;
+    max-width: 400px;
+    border: 1px solid #9e9393;
+    display: none;
+}
+
+.modal__masage-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal__masage-container:last-child {
+    margin-bottom: 0;
+}
+
+.modal__masage-adreser {
+    margin-right: 20px;
+
+}
+
+.modal__masage-box {
+    width: 200px;
+    height: 40px;
+    background: #9e9393;
+    border-radius: 10px;
+}
+
+.modal__masage-image {
+    display: flex;
+    justify-content: center;
+}
+
+.modal__account a {
+    color: #000;
+}
+
+.modal__account-block {
+    color: #000;
+}
+
+.modal__masage-image img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.modal__account {
+    z-index: 10;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #fff;
+    max-width: 400px;
+    border: 1px solid #9e9393;
+    display: none;
+}
+
+.modal__account-block {
+    padding: 15px 40px;
+    text-align: center;
+    border-bottom: 1px solid #9e9393;
+    display: block;
+    color: #222222;
+    transition: all 0.3s;
+}
+
+.modal__account-block:hover {
+    text-decoration: underline;
+    color: #676767;
+}
+
+.modal__account-block:last-child {
+    border-bottom: none;
+}
+
+
+/* =================================================================== */
+
+@media (max-width: 1250px) {
+    .header {
+        padding: 15px 50px;
+    }
+}
+
+@media (max-width: 650px) {
+    .header {
+        padding: 15px 20px;
+    }
+}
