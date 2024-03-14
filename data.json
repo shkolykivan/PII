@@ -1,0 +1,26 @@
+[
+    {
+        "group": "PZ-25",
+        "name": "Ivan Shkolyk",
+        "gender": "M",
+        "birthday": "02.07.2005"
+    },
+    {
+        "group": "PZ-25",
+        "name": "Lionel Messi",
+        "gender": "M",
+        "birthday": "02.07.2005"
+    },
+    {
+        "group": "PZ-25",
+        "name": "Kilian Mbappe",
+        "gender": "M",
+        "birthday": "02.07.2005"
+    },
+    {
+        "group": "PZ-25",
+        "name": "Andrey Lunin",
+        "gender": "M",
+        "birthday": "02.07.2005"
+    }
+]
