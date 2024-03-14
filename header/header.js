@@ -1,14 +1,3 @@
-async function getHeader() {
-    const response = await fetch('./header/header.html');
-    const data = await response.text()
-    document.querySelector('.header').innerHTML = data
-
-}
-
-getHeader();
-
-
-
 
 document.querySelector('.header__account').addEventListener('click', () => {
     document.querySelector('.modal__account').style.display = 'block'
