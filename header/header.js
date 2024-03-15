@@ -1,4 +1,4 @@
-document.querySelector('.header').addEventListener('click', () => {
+document.querySelector('.header').addEventListener('click', (event) => {
     document.querySelector('.modal__account').style.display = 'none'
     document.querySelector('.modal__masage').style.display = 'none'
 
