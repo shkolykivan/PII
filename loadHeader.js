@@ -8,3 +8,4 @@ async function getHeader() {
 getHeader();
 
 
+console.log('Data loaded')
