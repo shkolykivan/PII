@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="vns">
+
+    <title>Students</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../header/header.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__flex-box">
+                    <div class="header__cms">cms</div>
+                    <div class="header__right">
+                        <div class="header__massage">
+                            <img class="bell__img" src="../img/bell.svg" alt="bell">
+
+                            <div class="modal__masage">
+                                <div class="modal__masage-container ">
+                                    <div class="modal__masage-adreser">
+                                        <div class="modal__masage-image">
+                                            <img src="../img/cat.jpg" alt="cat">
+                                        </div>
+                                        <span>Admin</span>
+                                    </div>
+                                    <div class="modal__masage-box"></div>
+                                </div>
+                                <div class="modal__masage-container">
+                                    <div class="modal__masage-adreser">
+                                        <div class="modal__masage-image">
+                                            <img src="../img/cat.jpg" alt="cat">
+                                        </div>
+                                        <span>Admin</span>
+                                    </div>
+                                    <div class="modal__masage-box"></div>
+                                </div>
+                                <div class="modal__masage-container">
+                                    <div class="modal__masage-adreser">
+                                        <div class="modal__masage-image">
+                                            <img src="../img/cat.jpg" alt="cat">
+                                        </div>
+                                        <span>Admin</span>
+                                    </div>
+                                    <div class="modal__masage-box"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header__account">
+                            <div class="account__img">
+                                <img src="../img/cat.jpg" alt="cat">
+                            </div>
+                            <div class="account__name">Shkolyk Ivan</div>
+
+                            <div class="modal__account">
+                                <a href="#" class="modal__account-block">
+                                    <span>Profile</span>
+                                </a>
+                                <a href="#" class="modal__account-block">
+                                    <span>Log out</span>
+                                </a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main__container container">
+                <div class="main__flex-box">
+                    <nav class="navigation">
+                        <div class="navigation__block">
+                            <a href="../test.html">Dashboard</a>
+                        </div>
+                        <div class="navigation__block">
+                            <a href="./index.html">Students</a>
+                        </div>
+                        <div class="navigation__block">
+                            <a href="../tasks/tasks.html">Tasks</a>
+                        </div>
+                    </nav>
+                    <section class="content">
+                        <h1 class="main__title">Students</h1>
+                        <button class="add__student">+</button>
+                        <div class="table__container">
+                            <table class="table">
+                                <thead class="table__head">
+                                    <tr class="table__title">
+                                        <th class="table__content">
+                                            <label for="checkbox1"><span>1</span><input type="checkbox" name="checkbox1"
+                                                    class="checkbox"></label>
+                                        </th>
+                                        <th class="table__content"><span>Group</span></th>
+                                        <th class="table__content table__title-name"><span>Name</span></th>
+                                        <th class="table__content table__title-gender"><span>Gender</span></th>
+                                        <th class="table__content"><span>Birthday</span></th>
+                                        <th class="table__content table__title-status"><span>Status</span></th>
+                                        <th class="table__content table__title-options"><span>Options</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table__body">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+
+    <div class="adding__page">
+        <div class="adding__block">
+            <div class="adding__header">
+                <h2 class="chaning__title">Add Student</h2>
+                <button onclick="hideAddingPage()">X</button>
+            </div>
+            <form class="adding__form">
+                <div class="form__flex-box">
+                    <input class="id__input" type="hidden" name="id">
+                    <div class="form__item">
+                        <select class="group__input  input" name="group">
+                            <option value="" disabled selected hidden>Select Group</option>
+                            <option value="PZ-25">PZ-25</option>
+                            <option value="PZ-26">PZ-26</option>
+                        </select>
+                    </div>
+                    <div class="form__item">
+                        <input class="fname__input  input" type="text" name="fname" placeholder="First name">
+                    </div>
+                    <div class="form__item">
+                        <input class="lname__input  input" type="text" name="lname" placeholder="Last name">
+                    </div>
+                    <div class="form__item">
+                        <select class="gender__input  input" name="gender">
+                            <option value="" disabled selected hidden>Select Gender</option>
+                            <option value="F">F</option>
+                            <option value="M">M</option>
+                        </select>
+                    </div>
+                    <div class="form__item">
+                        <input class="birthday__input input" type="date" name="birthday">
+                    </div>
+                </div>
+            </form>
+            <div class=" adding__footer">
+                <button class="confirm__edit">Ok</button>
+                <button class="confirm__adding">Create</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="warning__page">
+        <div class=" warning__block">
+            <div class=" warning__header">
+                <h2>Warning</h2>
+                <button onclick="{document.querySelector('.warning__page').style.display = 'none'}">X</button>
+            </div>
+            <div class="warning__main">Are you sure you want to delete user?</div>
+            <div class=" warning__footer">
+                <button class="confirm__warning">Ok</button>
+                <button onclick="{document.querySelector('.warning__page').style.display = 'none'}">Cansel</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../header/header.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
