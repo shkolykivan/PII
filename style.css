@@ -484,7 +484,7 @@ label span {
 }
 
 .warning__input {
-    animation: invalideShake 1s;
+    animation: invalideShake 0.5s;
 }
 
 @keyframes invalideShake {
