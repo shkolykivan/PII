@@ -12,7 +12,7 @@ self.addEventListener("message", (event) => {
     self.skipWaiting();
   }
 });
-
+console.log("created")
 self.addEventListener('install', async (event) => {
   event.waitUntil(
     caches.open(CACHE)
@@ -45,3 +45,4 @@ self.addEventListener('fetch', (event) => {
     })());
   }
 });
+console.log("installed")
