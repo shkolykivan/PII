@@ -114,10 +114,10 @@ function mainFunction() {
             </td>
             <td class="table__content options">
                 <button class="options__edit">
-                    <img src="../img/pencil.svg">
+                    <img src="./img/pencil.svg">
                 </button>
                 <button class="options__delete">
-                    <img src="../img/cross.png">
+                    <img src="./img/cross.png">
                 </button>
                 <button class="options__hide-showe">
                     !
